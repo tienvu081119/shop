@@ -7,8 +7,9 @@ namespace Shop.Model.Models
     public class Footer
     {
         [Key]
-        public string ID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public string ID { set; get; }
         [Required]
-        public string Content { get; set; }
+        public string Content { set; get; }
     }
 }
